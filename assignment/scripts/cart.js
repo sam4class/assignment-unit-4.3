@@ -40,6 +40,42 @@ function empty(array) {
     return true;
 }
 console.log(empty(basket));
+//I kept the differnt ways I tried to create the 'empty' 
+//function at the bottom of this js file
+
+
+//***STRETCH GOALS***
+
+const maxItems = 5;
+
+//Create a function called 'isFull'
+
+function isFull(arr) {
+    if (arr.length < maxItems) {
+        console.log('More room in basket. Basket full:');
+        return false;
+    } else if(arr.length === maxItems) {
+        console.log('The basket is full. Basket full');
+        return 'Basket full:', true;
+    }else{
+        console.log('You can not add item, because basket is full.');
+    }
+}
+console.log(isFull(basket));
+//function addItem(){
+ //   function isFull(){
+   //     return true;
+  //  }
+//}
+//function addItem(){
+    //console.log('using addItem')
+  //  function isFull(){
+//console.log('using isFull');
+  //  }
+//}
+
+
+
 
 
 
@@ -70,6 +106,5 @@ console.log(empty(basket));
         //console.log('Removed item:', array0[i]);
   //  }
 //}
-
 //console.log(empty(basket))
 
