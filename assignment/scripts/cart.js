@@ -54,30 +54,76 @@ function isFull(arr) {
     if (arr.length < maxItems) {
         console.log('More room in basket. Basket full:');
         return false;
-    } else if(arr.length === maxItems) {
-        console.log('The basket is full. Basket full');
-        return 'Basket full:', true;
-    }else{
-        console.log('You can not add item, because basket is full.');
+    } else if (arr.length > maxItems) {
+        console.log('No more will fit. Too Full!')
+    } else {
+        console.log('Your Basket is Full');
+    }
+    return true
+}
+
+console.log(isFull(basket));
+
+console.log(addItem('shoe'));
+console.log(addItem('jacket'));
+console.log(addItem('hat'));
+
+console.log(isFull(basket));
+
+console.log(addItem('mittens'));
+console.log(addItem('scarf'));
+
+console.log(isFull(basket));
+
+console.log(addItem('vest'));
+
+console.log(isFull(basket));
+
+function addItem(item) {
+    basket.push(item);
+    function isFull(arr) {
+        if (arr.length < maxItems) {
+            console.log('More room in basket. Basket full:');
+            return false;
+        } else if (arr.length > maxItems) {
+            console.log('No more will fit. Too Full!')
+        } else {
+            console.log('Your Basket is Full');
+        }
+        return true
     }
 }
-console.log(isFull(basket));
-//function addItem(){
- //   function isFull(){
-   //     return true;
-  //  }
-//}
-//function addItem(){
-    //console.log('using addItem')
-  //  function isFull(){
-//console.log('using isFull');
-  //  }
+
+console.log(addItem('tie'));
+
+//let itemAdd = addItem(item){
+  //  let nowItem = function isFull(){
+    //    return item;
+    //}
+    //return nowItem;
 //}
 
+//console.log(itemAdd(basket));
 
 
 
+//Create a function called 'removeItem'
 
+function removedItem(item, array){
+    let numItem = array.indexOf(item);
+            console.log(numItem);
+            if(numItem >= 0){
+                array.splice(numItem);
+                return item;
+            }else{
+                console.log('Not in basket');
+            }
+           return null;
+    }
+
+
+//console.log(removedItem('pants', basket));
+console.log(removedItem('scarf', basket));
 
 
 
