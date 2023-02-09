@@ -64,6 +64,8 @@ function isFull(arr) {
 
 console.log(isFull(basket));
 
+//Added items to see code in each step
+
 console.log(addItem('shoe'));
 console.log(addItem('jacket'));
 console.log(addItem('hat'));
@@ -83,7 +85,7 @@ console.log(isFull(basket));
 
 
 function addItem2(item, array){
-    if(isFull(array) > maxItems){
+    if(isFull(array) < maxItems){
         console.log('Basket Full!!!');
         return false;
     }else{
@@ -94,6 +96,18 @@ function addItem2(item, array){
 }
 
 console.log(addItem2('hoodie', basket));
+
+
+//Ran 'listItems' again to see if 'addItem2' was working:
+
+// function listItems(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         console.log('Item in basket:', array[i]);
+//     }
+//     return true;
+// }
+
+// console.log(listItems(basket));
 
 
 //Create a function called 'removeItem'
