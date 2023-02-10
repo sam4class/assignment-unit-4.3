@@ -70,19 +70,23 @@ console.log(addItem('shoe'));
 console.log(addItem('jacket'));
 console.log(addItem('hat'));
 
+//Should be false
 console.log(isFull(basket));
 
 console.log(addItem('mittens'));
 console.log(addItem('scarf'));
 
+//Should be 'full' true
 console.log(isFull(basket));
 
 console.log(addItem('vest'));
 
+//Should be 'too full' true
 console.log(isFull(basket));
 
-// ReCreate 'addItems' function
 
+
+// ReCreate 'addItems' function
 
 function addItem2(item, array){
     if(isFull(array) < maxItems){
@@ -124,8 +128,17 @@ function removedItem(item, array){
            return null;
     }
 
-
 //console.log(removedItem('pants', basket));
 console.log(removedItem('scarf', basket));
+//console.log(removedItem('cat', basket));
 
+//Checked to see if scarf was removed:
 
+// function listItems(array) {
+//     for (let i = 0; i < array.length; i++) {
+//         console.log('Item in basket:', array[i]);
+//     }
+//     return true;
+// }
+
+// console.log(listItems(basket));
